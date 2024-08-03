@@ -18,6 +18,10 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard', compact('title'));
 });
 
+Route::get('/', function () {
+    return view('users.home');
+});
+
 // customer 
 Route::get('/customer', [CustomersController::class, 'index']);
 Route::get('/customer/create', [CustomersController::class, 'create']);
@@ -27,7 +31,7 @@ Route::get('/access-rights', [UsersController::class, 'index']);
 
 // paket setttings
 Route::get('/paket-settings', [PaketsSetupController::class, 'index']);
- 
+
 // transactions
 Route::get('/membership/transaction', [MembershipTransactionsController::class, 'index']);
 Route::get('/membership/history', [MembershipTransactionsController::class, 'index']);

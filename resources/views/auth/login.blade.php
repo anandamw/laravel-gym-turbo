@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<!-- Mirrored from www.annimexweb.com/items/avone/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 19:08:56 GMT -->
+@extends('users.layouts.app')
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Login - Avone Multipurpose eCommerce Bootstrap4 Html Template</title>
-    <meta name="description" content="description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css" />
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-</head>
-
-<body class="login-page">
-    <div id="pre-loader">
-        <img src="assets/images/loader.gif" alt="Loading..." />
-    </div>
+@section('content')
     <div class="page-wrapper">
         <!--Promotion Bar-->
         <div class="notification-bar mobilehide">
@@ -38,8 +18,7 @@
                     <!--Mobile Icons-->
                     <div class="col-4 col-sm-4 col-md-4 d-block d-lg-none mobile-icons">
                         <!--Mobile Toggle-->
-                        <button type="button"
-                            class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
                             <i class="icon anm anm-times-l"></i>
                             <i class="anm anm-bars-r"></i>
                         </button>
@@ -70,16 +49,14 @@
                                             <li class="grid__item large-up--one-whole">
                                                 <ul class="grid">
                                                     <li class="grid__item lvl-1 col-md-4 col-lg-4">
-                                                        <a href="#"
-                                                            class="site-nav lvl-1 menu-title">Homepages</a>
+                                                        <a href="#" class="site-nav lvl-1 menu-title">Homepages</a>
                                                         <ul class="subLinks">
                                                             <li class="lvl-2">
                                                                 <a href="index.html" class="site-nav lvl-2">Home 01
                                                                     <span class="lbl nm_label3">Popular</span></a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo2.html" class="site-nav lvl-2">Home
-                                                                    02
+                                                                <a href="index-demo2.html" class="site-nav lvl-2">Home 02
                                                                     <span class="lbl nm_label3">Popular</span></a>
                                                             </li>
                                                             <li class="lvl-2">
@@ -115,74 +92,70 @@
                                                                     class="site-nav lvl-2">Pottery Store</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-modern.html"
-                                                                    class="site-nav lvl-2">Modern
+                                                                <a href="index-modern.html" class="site-nav lvl-2">Modern
                                                                     <span class="lbl nm_label2">New</span></a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li class="grid__item lvl-1 col-md-4 col-lg-4">
-                                                        <a href="#"
-                                                            class="site-nav lvl-1 menu-title">Homepages</a>
+                                                        <a href="#" class="site-nav lvl-1 menu-title">Homepages</a>
                                                         <ul class="subLinks">
                                                             <li class="lvl-2">
-                                                                <a href="index-demo10.html"
-                                                                    class="site-nav lvl-2">Home 10</a>
+                                                                <a href="index-demo10.html" class="site-nav lvl-2">Home
+                                                                    10</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo11.html"
-                                                                    class="site-nav lvl-2">Home 11</a>
+                                                                <a href="index-demo11.html" class="site-nav lvl-2">Home
+                                                                    11</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo12.html"
-                                                                    class="site-nav lvl-2">Home 12</a>
+                                                                <a href="index-demo12.html" class="site-nav lvl-2">Home
+                                                                    12</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo13.html"
-                                                                    class="site-nav lvl-2">Home 13</a>
+                                                                <a href="index-demo13.html" class="site-nav lvl-2">Home
+                                                                    13</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo14.html"
-                                                                    class="site-nav lvl-2">Home 14</a>
+                                                                <a href="index-demo14.html" class="site-nav lvl-2">Home
+                                                                    14</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo15.html"
-                                                                    class="site-nav lvl-2">Home 15</a>
+                                                                <a href="index-demo15.html" class="site-nav lvl-2">Home
+                                                                    15</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo16.html"
-                                                                    class="site-nav lvl-2">Home 16</a>
+                                                                <a href="index-demo16.html" class="site-nav lvl-2">Home
+                                                                    16</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-demo17.html"
-                                                                    class="site-nav lvl-2">Home 17</a>
+                                                                <a href="index-demo17.html" class="site-nav lvl-2">Home
+                                                                    17</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-yoga-shop.html"
-                                                                    class="site-nav lvl-2">Yoga Shop</a>
+                                                                <a href="index-yoga-shop.html" class="site-nav lvl-2">Yoga
+                                                                    Shop</a>
                                                             </li>
                                                             <li class="lvl-2">
                                                                 <a href="index-wine-store.html"
                                                                     class="site-nav lvl-2">Wine Store</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-plants.html"
-                                                                    class="site-nav lvl-2">Plants
+                                                                <a href="index-plants.html" class="site-nav lvl-2">Plants
                                                                     <span class="lbl nm_label2">New</span></a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li class="grid__item lvl-1 col-md-4 col-lg-4">
-                                                        <a href="#"
-                                                            class="site-nav lvl-1 menu-title">Homeskin</a>
+                                                        <a href="#" class="site-nav lvl-1 menu-title">Homeskin</a>
                                                         <ul class="subLinks">
                                                             <li class="lvl-2">
                                                                 <a href="index-jewelry-store.html"
                                                                     class="site-nav lvl-2">Jewelry Store</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-pet-store.html"
-                                                                    class="site-nav lvl-2">Pet Store
+                                                                <a href="index-pet-store.html" class="site-nav lvl-2">Pet
+                                                                    Store
                                                                     <span class="lbl nm_label4">Hot</span></a>
                                                             </li>
                                                             <li class="lvl-2">
@@ -219,8 +192,8 @@
                                                                     class="site-nav lvl-2">Bike Store</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="index-kids-toy.html"
-                                                                    class="site-nav lvl-2">Kids Toy
+                                                                <a href="index-kids-toy.html" class="site-nav lvl-2">Kids
+                                                                    Toy
                                                                     <span class="lbl nm_label2">New</span></a>
                                                             </li>
                                                         </ul>
@@ -252,24 +225,24 @@
                                                 <a href="#" class="site-nav lvl-1 menu-title">Category Page</a>
                                                 <ul class="subLinks">
                                                     <li class="lvl-2">
-                                                        <a href="category-2columns.html" class="site-nav lvl-2">2
-                                                            Columns with style1</a>
+                                                        <a href="category-2columns.html" class="site-nav lvl-2">2 Columns
+                                                            with style1</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="category-3columns.html" class="site-nav lvl-2">3
-                                                            Columns with style2</a>
+                                                        <a href="category-3columns.html" class="site-nav lvl-2">3 Columns
+                                                            with style2</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="category-4columns.html" class="site-nav lvl-2">4
-                                                            Columns with style3</a>
+                                                        <a href="category-4columns.html" class="site-nav lvl-2">4 Columns
+                                                            with style3</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="category-5columns.html" class="site-nav lvl-2">5
-                                                            Columns with style4</a>
+                                                        <a href="category-5columns.html" class="site-nav lvl-2">5 Columns
+                                                            with style4</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="category-6columns.html" class="site-nav lvl-2">6
-                                                            Columns with Fullwidth</a>
+                                                        <a href="category-6columns.html" class="site-nav lvl-2">6 Columns
+                                                            with Fullwidth</a>
                                                     </li>
                                                     <li class="lvl-2">
                                                         <a href="category-7columns.html" class="site-nav lvl-2">7
@@ -285,8 +258,7 @@
                                                 <a href="#" class="site-nav lvl-1 menu-title">Shop Page</a>
                                                 <ul class="subLinks">
                                                     <li class="lvl-2">
-                                                        <a href="shop-list-view.html" class="site-nav lvl-2">List
-                                                            View</a>
+                                                        <a href="shop-list-view.html" class="site-nav lvl-2">List View</a>
                                                     </li>
                                                     <li class="lvl-2">
                                                         <a href="shop-category-slideshow.html"
@@ -301,16 +273,16 @@
                                                             Sidebar</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="shop-fullwidth.html"
-                                                            class="site-nav lvl-2">Fullwidth/No Sidebar</a>
+                                                        <a href="shop-fullwidth.html" class="site-nav lvl-2">Fullwidth/No
+                                                            Sidebar</a>
                                                     </li>
                                                     <li class="lvl-2">
                                                         <a href="shop-no-sidebar.html" class="site-nav lvl-2">No
                                                             Sidebar/No Filter</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="shop-category-slideshow.html"
-                                                            class="site-nav lvl-2">With category description</a>
+                                                        <a href="shop-category-slideshow.html" class="site-nav lvl-2">With
+                                                            category description</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -326,12 +298,12 @@
                                                             Heading</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="shop-no-sidebar.html" class="site-nav lvl-2">Big
-                                                            Heading With Image</a>
+                                                        <a href="shop-no-sidebar.html" class="site-nav lvl-2">Big Heading
+                                                            With Image</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="shop-right-sidebar.html"
-                                                            class="site-nav lvl-2">Headings With Banner#1</a>
+                                                        <a href="shop-right-sidebar.html" class="site-nav lvl-2">Headings
+                                                            With Banner#1</a>
                                                     </li>
                                                     <li class="lvl-2">
                                                         <a href="shop-heading-with-banner2.html"
@@ -342,18 +314,16 @@
                                                             Style</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="shop-right-sidebar.html"
-                                                            class="site-nav lvl-2">Classic Pagination</a>
+                                                        <a href="shop-right-sidebar.html" class="site-nav lvl-2">Classic
+                                                            Pagination</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="grid__item lvl-1 col-md-3 col-lg-3">
-                                                <a href="#" class="site-nav lvl-1 menu-title">Shop Other
-                                                    Page</a>
+                                                <a href="#" class="site-nav lvl-1 menu-title">Shop Other Page</a>
                                                 <ul class="subLinks">
                                                     <li class="lvl-2">
-                                                        <a href="my-wishlist.html" class="site-nav lvl-2">My
-                                                            Wishlist</a>
+                                                        <a href="my-wishlist.html" class="site-nav lvl-2">My Wishlist</a>
                                                     </li>
                                                     <li class="lvl-2">
                                                         <a href="cart-style1.html" class="site-nav lvl-2">Cart Page
@@ -372,12 +342,12 @@
                                                             Page Style2</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="compare-style1.html" class="site-nav lvl-2">Compare
-                                                            Page Style1</a>
+                                                        <a href="compare-style1.html" class="site-nav lvl-2">Compare Page
+                                                            Style1</a>
                                                     </li>
                                                     <li class="lvl-2">
-                                                        <a href="compare-style2.html" class="site-nav lvl-2">Compare
-                                                            Page Style2</a>
+                                                        <a href="compare-style2.html" class="site-nav lvl-2">Compare Page
+                                                            Style2</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -454,8 +424,8 @@
                                                         </ul>
                                                     </li>
                                                     <li class="grid__item lvl-1 col-md-3 col-lg-3">
-                                                        <a href="#" class="site-nav lvl-1 menu-title">Product
-                                                            Page Types</a>
+                                                        <a href="#" class="site-nav lvl-1 menu-title">Product Page
+                                                            Types</a>
                                                         <ul class="subLinks">
                                                             <li class="lvl-2">
                                                                 <a href="product-standard.html"
@@ -470,12 +440,12 @@
                                                                     class="site-nav lvl-2">Grouped Product</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="product-layout1.html"
-                                                                    class="site-nav lvl-2">New Product</a>
+                                                                <a href="product-layout1.html" class="site-nav lvl-2">New
+                                                                    Product</a>
                                                             </li>
                                                             <li class="lvl-2">
-                                                                <a href="product-layout2.html"
-                                                                    class="site-nav lvl-2">Sale Product</a>
+                                                                <a href="product-layout2.html" class="site-nav lvl-2">Sale
+                                                                    Product</a>
                                                             </li>
                                                             <li class="lvl-2">
                                                                 <a href="product-outofstock.html"
@@ -483,8 +453,7 @@
                                                             </li>
                                                             <li class="lvl-2">
                                                                 <a href="product-external-affiliate.html"
-                                                                    class="site-nav lvl-2">External / Affiliate
-                                                                    Product</a>
+                                                                    class="site-nav lvl-2">External / Affiliate Product</a>
                                                             </li>
                                                             <li class="lvl-2">
                                                                 <a href="product-layout1.html"
@@ -501,34 +470,26 @@
                                                         </ul>
                                                     </li>
                                                     <li class="grid__item lvl-1 col-md-3 col-lg-3">
-                                                        <a href="#" class="site-nav lvl-1 menu-title">Top
-                                                            Brands</a>
+                                                        <a href="#" class="site-nav lvl-1 menu-title">Top Brands</a>
                                                         <div class="menu-brand-logo">
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo1.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo1.png"
                                                                     alt="" /></a>
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo2.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo2.png"
                                                                     alt="" /></a>
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo3.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo3.png"
                                                                     alt="" /></a>
                                                         </div>
                                                         <div class="menu-brand-logo">
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo4.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo4.png"
                                                                     alt="" /></a>
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo5.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo5.png"
                                                                     alt="" /></a>
-                                                            <a href="#;"><img
-                                                                    src="assets/images/logo/brandlogo6.png"
+                                                            <a href="#;"><img src="assets/images/logo/brandlogo6.png"
                                                                     alt="" /></a>
                                                         </div>
                                                     </li>
                                                     <li class="grid__item lvl-1 col-md-3 col-lg-3 p-0">
-                                                        <a href="#"><img
-                                                                src="assets/images/megamenu-banner3.jpg"
+                                                        <a href="#"><img src="assets/images/megamenu-banner3.jpg"
                                                                 alt="" /></a>
                                                     </li>
                                                 </ul>
@@ -549,8 +510,7 @@
                                             <a href="lookbook-4columns.html" class="site-nav">4 Columns</a>
                                         </li>
                                         <li>
-                                            <a href="lookbook-5columns.html" class="site-nav">5 Columns +
-                                                Fullwidth</a>
+                                            <a href="lookbook-5columns.html" class="site-nav">5 Columns + Fullwidth</a>
                                         </li>
                                         <li>
                                             <a href="lookbook-shop.html" class="site-nav">Lookbook Shop</a>
@@ -584,12 +544,10 @@
                                                     class="anm anm-angle-right-l"></i></a>
                                             <ul class="dropdown">
                                                 <li>
-                                                    <a href="contact-style1.html" class="site-nav">Contact Us
-                                                        Style1</a>
+                                                    <a href="contact-style1.html" class="site-nav">Contact Us Style1</a>
                                                 </li>
                                                 <li>
-                                                    <a href="contact-style2.html" class="site-nav">Contact Us
-                                                        Style2</a>
+                                                    <a href="contact-style2.html" class="site-nav">Contact Us Style2</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -657,8 +615,7 @@
                                 <h3 class="title">What are you looking for?</h3>
                                 <div class="block block-search">
                                     <div class="block block-content">
-                                        <form class="form minisearch" id="header-search" action="#"
-                                            method="get">
+                                        <form class="form minisearch" id="header-search" action="#" method="get">
                                             <label for="search" class="label"><span>Search</span></label>
                                             <div class="control">
                                                 <div class="searchField">
@@ -678,8 +635,7 @@
                                                     </div>
                                                     <div class="input-box">
                                                         <input id="search" type="text" name="q"
-                                                            value=""
-                                                            placeholder="Search for products, brands..."
+                                                            value="" placeholder="Search for products, brands..."
                                                             class="input-text" />
                                                         <button type="submit" title="Search" class="action search"
                                                             disabled="">
@@ -953,8 +909,7 @@
                                     <a href="shop-right-sidebar.html" class="site-nav">Headings With Banner#1</a>
                                 </li>
                                 <li>
-                                    <a href="shop-heading-with-banner2.html" class="site-nav2">Headings With
-                                        Banner#2</a>
+                                    <a href="shop-heading-with-banner2.html" class="site-nav2">Headings With Banner#2</a>
                                 </li>
                                 <li>
                                     <a href="swatches-style.html" class="site-nav">Swatches Style</a>
@@ -1099,8 +1054,7 @@
                         <li><a href="login.html" class="site-nav">Login</a></li>
                         <li><a href="my-account.html" class="site-nav">My Account</a></li>
                         <li>
-                            <a href="aboutus-style1.html" class="site-nav">About Us <i
-                                    class="anm anm-plus-l"></i></a>
+                            <a href="aboutus-style1.html" class="site-nav">About Us <i class="anm anm-plus-l"></i></a>
                             <ul class="dropdown">
                                 <li>
                                     <a href="aboutus-style1.html" class="site-nav">About Us Style1</a>
@@ -1111,8 +1065,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="contact-style1.html" class="site-nav">Contact Us <i
-                                    class="anm anm-plus-l"></i></a>
+                            <a href="contact-style1.html" class="site-nav">Contact Us <i class="anm anm-plus-l"></i></a>
                             <ul class="dropdown">
                                 <li>
                                     <a href="contact-style1.html" class="site-nav">Contact Us Style1</a>
@@ -1214,8 +1167,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                         <div class="form-group">
-                                            <label for="CustomerPassword">Password <span
-                                                    class="required">*</span></label>
+                                            <label for="CustomerPassword">Password <span class="required">*</span></label>
                                             <input type="password" value="" name="customer[password]"
                                                 placeholder="" id="CustomerPassword" class="" />
                                         </div>
@@ -1369,15 +1321,13 @@
                                                 aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="icon icon-pencil"
                                                 aria-hidden="true"></i></a>
-                                        <a class="product-title" href="cart-style1.html">Backpack With Contrast
-                                            Bow</a>
+                                        <a class="product-title" href="cart-style1.html">Backpack With Contrast Bow</a>
                                         <div class="variant-cart">Black / XL</div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i
                                                         class="anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" name="quantity" value="1"
-                                                    class="qty" />
+                                                <input type="text" name="quantity" value="1" class="qty" />
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i
                                                         class="anm anm-plus-r" aria-hidden="true"></i></a>
                                             </div>
@@ -1446,15 +1396,5 @@
         </div>
         <!--End MiniCart Drawer-->
 
-        <!-- Including Jquery -->
-        <script src="assets/js/vendor/jquery-min.js"></script>
-        <script src="assets/js/vendor/js.cookie.js"></script>
-        <!-- Including Javascript -->
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
     </div>
-</body>
-
-<!-- Mirrored from www.annimexweb.com/items/avone/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 19:08:58 GMT -->
-
-</html>
+@endsection
