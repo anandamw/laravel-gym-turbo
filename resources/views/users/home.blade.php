@@ -1,944 +1,674 @@
 @extends('users.layouts.app')
 @section('content')
-    <div class="page-wrapper">
-
-        <!--Header-->
-        <header class="header animated d-flex align-items-center header-16">
-            <div class="container-fluid">
-                <div class="row">
-                    <!--Mobile Icons-->
-                    <div class="col-4 col-sm-4 col-md-4 d-block d-lg-none mobile-icons">
-                        <!--Mobile Toggle-->
-                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                            <i class="icon anm anm-times-l"></i>
-                            <i class="anm anm-bars-r"></i>
-                        </button>
-                        <!--End Mobile Toggle-->
-                        <!--Search-->
-                        <div class="site-search iconset">
-                            <i class="icon anm anm-search-l"></i>
-                        </div>
-                        <!--End Search-->
-                    </div>
-                    <!--Mobile Icons-->
-                    <div class="col-1 col-sm-1 col-md-1 col-lg-5 align-self-center d-menu-col">
-                        <!--Desktop Menu-->
-                        <nav class="grid__item" id="AccessibleNav">
-                            <ul id="siteNav" class="site-nav medium left hidearrow">
-                                <li class="lvl1 parent megamenu mdropdown"><a href="#;">Home <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-                                <li class="lvl1 parent megamenu"><a href="#">Shop <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-                                <li class="lvl1 parent megamenu"><a href="#">Features <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-                                <li class="lvl1 parent dropdown"><a href="#">Lookbook <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-                                <li class="lvl1 parent dropdown"><a href="#">Pages <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-                                <li class="lvl1 parent dropdown"><a href="#">Blog <i
-                                            class="anm anm-angle-down-l"></i></a>
-
-                                </li>
-
-                            </ul>
-                        </nav>
-                        <!--End Desktop Menu-->
-                    </div>
-                    <!--Desktop Logo-->
-                    <div class="logo col-4 col-sm-4 col-md-4 col-lg-2 align-self-center">
-                        <a href="index.html">
-                            <img src="{{ asset('') }}assets_users/images/avon-logo.svg"
-                                alt="Avone Multipurpose Html Template" title="Avone Multipurpose Html Template" />
-                        </a>
-                    </div>
-                    <!--End Desktop Logo-->
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-5 align-self-center icons-col text-right">
-                        <!--Search-->
-                        <div class="site-search iconset">
-                            <i class="icon anm anm-search-l"></i>
-                        </div>
-                        <div class="search-drawer">
-                            <div class="container">
-                                <span class="closeSearch anm anm-times-l"></span>
-                                <h3 class="title">What are you looking for?</h3>
-                                <div class="block block-search">
-                                    <div class="block block-content">
-                                        <form class="form minisearch" id="header-search" action="#" method="get">
-                                            <label for="search" class="label"><span>Search</span></label>
-                                            <div class="control">
-                                                <div class="searchField">
-                                                    <div class="search-category">
-                                                        <select id="rgsearch-category">
-                                                            <option value="0">All Categories</option>
-                                                            <option value="4">Shop</option>
-                                                            <option value="6">- All</option>
-                                                            <option value="8">- Men</option>
-                                                            <option value="10">- Women</option>
-                                                            <option value="12">- Shoes</option>
-                                                            <option value="14">- Blouses</option>
-                                                            <option value="16">- Pullovers</option>
-                                                            <option value="18">- Bags</option>
-                                                            <option value="20">- Accessories</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="input-box">
-                                                        <input id="search" type="text" name="q" value=""
-                                                            placeholder="Search for products, brands..." class="input-text">
-                                                        <button type="submit" title="Search" class="action search"
-                                                            disabled=""><i class="icon anm anm-search-l"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Search-->
-                        <!--Setting Dropdown-->
-                        <div class="setting-link iconset">
-                            <i class="icon icon-settings"></i>
-                        </div>
-                        <div id="settingsBox">
-                            <div class="customer-links">
-                                <p><a href="login.html" class="btn">Login</a></p>
-                                <p class="text-center">New User? <a href="register.html" class="register">Create an
-                                        Account</a></p>
-                                <p class="text-center">Default welcome msg!</p>
-                            </div>
-                            <div class="currency-picker">
-                                <span class="ttl">Select Currency</span>
-                                <ul id="currencies" class="cnrLangList">
-                                    <li class="selected"><a href="#;">INR</a></li>
-                                    <li><a href="#;">GBP</a></li>
-                                    <li><a href="#;">CAD</a></li>
-                                    <li><a href="#;">USD</a></li>
-                                    <li><a href="#;">AUD</a></li>
-                                    <li><a href="#;">EUR</a></li>
-                                    <li><a href="#;">JPY</a></li>
-                                </ul>
-                            </div>
-                            <div class="language-picker">
-                                <span class="ttl">SELECT LANGUAGE</span>
-                                <ul id="language" class="cnrLangList">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a>German</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End Setting Dropdown-->
-                        <!--Wishlist-->
-                        <div class="wishlist-link iconset">
-                            <i class="icon anm anm-heart-l"></i>
-                            <span class="wishlist-count">0</span>
-                        </div>
-                        <!--End Wishlist-->
-                        <!--Minicart Dropdown-->
-                        <div class="header-cart iconset">
-                            <a href="#" class="site-header__cart btn-minicart" data-toggle="modal"
-                                data-target="#minicart-drawer">
-                                <i class="icon anm anm-basket-l"></i>
-                                <span class="site-cart-count">2</span>
-                            </a>
-                        </div>
-                        <!--End Minicart Dropdown-->
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!--End Header-->
-        <!--Mobile Menu-->
-        <div class="mobile-nav-wrapper" role="navigation">
-            <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
-            <ul id="MobileNav" class="mobile-nav">
-                <li class="lvl1 parent megamenu"><a href="index.html">Home <i class="anm anm-plus-l"></i></a>
-
-                </li>
-                <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-plus-l"></i></a>
-
-                </li>
-                <li class="lvl1 parent megamenu"><a href="product-layout1.html">Product <i
-                            class="anm anm-plus-l"></i></a>
-
-                </li>
-                <li class="lvl1 parent megamenu"><a href="#">Lookbook <i class="anm anm-plus-l"></i></a>
-
-                </li>
-                <li class="lvl1 parent megamenu"><a href="about-us.html">Pages <i class="anm anm-plus-l"></i></a>
-
-                </li>
-                <li class="lvl1 parent megamenu"><a href="blog-left-sidebar.html">Blog <i class="anm anm-plus-l"></i></a>
-
-                </li>
-
-            </ul>
-        </div>
-        <!--End Mobile Menu-->
-
-        <div id="page-content">
-            <!--Home slider-->
-            <div class="slideshow slideshow-wrapper">
-                <div class="home-slideshow">
-                    <div class="slide">
-                        <div class="blur-up lazyload">
-                            <img class="blur-up lazyload"
-                                data-src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner1.jpg"
-                                src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner1.jpg"
-                                alt="NEW IN" title="NEW IN" />
-                            <div class="slideshow__text-wrap slideshow__overlay bottomcenter whiteText">
-                                <div class="slideshow__text-content">
-                                    <div class="wrap-caption anim-tru bottom style1">
-                                        <h2 class="h1 mega-title slideshow__title">NEW IN</h2>
-                                        <span class="mega-subtitle slideshow__subtitle">WIDE RANGE OF YOGA
-                                            CLOTHES</span>
-                                        <span class="btn">Shop now</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blur-up lazyload">
-                            <img class="blur-up lazyload"
-                                data-src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner2.jpg"
-                                src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner2.jpg"
-                                alt="RELAX &amp; RELEASE" title="RELAX &amp; RELEASE" />
-                            <div class="slideshow__text-wrap slideshow__overlay topcenter">
-                                <div class="slideshow__text-content">
-                                    <div class="wrap-caption anim-tru style1">
-                                        <h2 class="h1 mega-title slideshow__title">RELAX &amp; RELEASE</h2>
-                                        <span class="mega-subtitle slideshow__subtitle">YOGA EQUIPMENT TO STRETCH YOUR
-                                            BODY AND STILL YOUR MIND</span>
-                                        <span class="btn">Shop now</span>
-                                    </div>
+    <div id="page-content">
+        <!--Home slider-->
+        <div class="slideshow slideshow-wrapper">
+            <div class="home-slideshow">
+                <div class="slide">
+                    <div class="blur-up lazyload">
+                        <img class="blur-up lazyload"
+                            data-src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner1.jpg"
+                            src="{{ asset('') }}assets_users/images/slideshow-banner/yoga-banner1.jpg" alt="NEW IN"
+                            title="NEW IN" />
+                        <div class="slideshow__text-wrap slideshow__overlay bottomcenter whiteText">
+                            <div class="slideshow__text-content">
+                                <div class="wrap-caption anim-tru bottom style1">
+                                    <h2 class="h1 mega-title slideshow__title">NEW IN</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">WIDE RANGE OF YOGA
+                                        CLOTHES</span>
+                                    <span class="btn">Shop now</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--End Home slider-->
-
-            <!--Body Container-->
-            <!--Image Banner-->
-            <div class="section imgBanners style2">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>YOGA IS A LIFESTYLE</h2>
-                        <p>Our wide selection of colourful and trendy yoga clothes has something for every yogi's
-                            taste.<br> From high wasted yoga leggings, yoga outfit sets, padded yoga tops and supportive
-                            yoga <br>bras to comfortable harem yoga pants and yoga jumpsuits. </p>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
-                            <div class="imgBanner-grid-item">
-                                <div class="inner">
-                                    <a href="#">
-                                        <span class="img">
-                                            <img class="blur-up lazyload"
-                                                data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner1.jpg"
-                                                src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner1.jpg"
-                                                alt="Trend Alert" title="Trend Alert" />
-                                        </span>
-                                    </a>
-                                    <div class="details w-50 center">
-                                        <h3 class="title">YOGA KITS</h3>
-                                    </div>
+                <div class="slide">
+                    <div class="blur-up lazyload">
+                        <img class="blur-up lazyload"
+                            data-src="{{ asset('') }}assets_users/images/slideshow-banner/slideshow-banner1.jpg"
+                            src="{{ asset('') }}assets_users/images/slideshow-banner/slideshow-banner1.jpg"
+                            alt="RELAX &amp; RELEASE" title="RELAX &amp; RELEASE" />
+                        <div class="slideshow__text-wrap slideshow__overlay topcenter">
+                            <div class="slideshow__text-content">
+                                <div class="wrap-caption anim-tru style1">
+                                    <h2 class="h1 mega-title slideshow__title">RELAX &amp; RELEASE</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">YOGA EQUIPMENT TO STRETCH YOUR
+                                        BODY AND STILL YOUR MIND</span>
+                                    <span class="btn">Shop now</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
-                            <div class="imgBanner-grid-item">
-                                <div class="inner">
-                                    <a href="#">
-                                        <span class="img">
-                                            <img class="blur-up lazyload"
-                                                data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner2.jpg"
-                                                src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner2.jpg"
-                                                alt="Hot Occasion" title="Hot Occasion" />
-                                        </span>
-                                    </a>
-                                    <div class="details w-50 center">
-                                        <h3 class="title">YOGA CLOTHES</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
-                            <div class="imgBanner-grid-item">
-                                <div class="inner">
-                                    <a href="#">
-                                        <span class="img">
-                                            <img class="blur-up lazyload"
-                                                data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner3.jpg"
-                                                src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner3.jpg"
-                                                alt="Hot Occasion" title="Hot Occasion" />
-                                        </span>
-                                    </a>
-                                    <div class="details w-50 center">
-                                        <h3 class="title">YOGA MATS</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Image Banner-->
-
-            <!--New Arrivals-->
-            <div class="section product-slider products-grid-section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>New Arrivals</h2>
-                        <p>Shop our new arrivals from established brands</p>
-                    </div>
-                    <div class="productSlider grid-products">
-                        <div class="col-12 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout1.html" class="product-img">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro1.jpg"
-                                        alt="" title="">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro1-1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro1-1.jpg"
-                                        alt="" title="">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
-                                <!--Product Button-->
-                                <div class="button-set style1">
-                                    <ul>
-                                        <li>
-                                            <!--Quick View Button-->
-                                            <a href="javascript:void(0)" title="Quick View"
-                                                class="btn-icon quick-view-popup quick-view" data-toggle="modal"
-                                                data-target="#content_quickview">
-                                                <i class="icon anm anm-search-plus-l"></i>
-                                                <span class="tooltip-label">Quick View</span>
-                                            </a>
-                                            <!--End Quick View Button-->
-                                        </li>
-                                        <li>
-                                            <!--Wishlist Button-->
-                                            <div class="wishlist-btn">
-                                                <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
-                                                    <i class="icon anm anm-heart-l"></i>
-                                                    <span class="tooltip-label">Add To Wishlist</span>
-                                                </a>
-                                            </div>
-                                            <!--End Wishlist Button-->
-                                        </li>
-                                        <li>
-                                            <!--Compare Button-->
-                                            <div class="compare-btn">
-                                                <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
-                                                    title="Add to Compare">
-                                                    <i class="icon icon-reload"></i>
-                                                    <span class="tooltip-label">Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <!--End Compare Button-->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End Product Button-->
-                            </div>
-                            <!-- end product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout1.html">4 mm Thick Yoga Mat</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">$50.01</span>
-                                </div>
-                                <!-- End product price -->
-                                <!--Product Review-->
-                                <div class="product-review">
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                </div>
-                                <!--End Product Review-->
-                            </div>
-                            <!-- End product details -->
-                            <!--Cart Button-->
-                            <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
-                                method="post">
-                                <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button"
-                                    tabindex="0">Add to Cart</button>
-                            </form>
-                            <!--end Cart Button-->
-                        </div>
-                        <div class="col-12 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout1.html" class="product-img">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro2.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro2.jpg"
-                                        alt="" title="">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro2-1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro2-1.jpg"
-                                        alt="" title="">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!--Product Button-->
-                                <div class="button-set style1">
-                                    <ul>
-                                        <li>
-                                            <!--Quick View Button-->
-                                            <a href="javascript:void(0)" title="Quick View"
-                                                class="btn-icon quick-view-popup quick-view" data-toggle="modal"
-                                                data-target="#content_quickview">
-                                                <i class="icon anm anm-search-plus-l"></i>
-                                                <span class="tooltip-label">Quick View</span>
-                                            </a>
-                                            <!--End Quick View Button-->
-                                        </li>
-                                        <li>
-                                            <!--Wishlist Button-->
-                                            <div class="wishlist-btn">
-                                                <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
-                                                    <i class="icon anm anm-heart-l"></i>
-                                                    <span class="tooltip-label">Add To Wishlist</span>
-                                                </a>
-                                            </div>
-                                            <!--End Wishlist Button-->
-                                        </li>
-                                        <li>
-                                            <!--Compare Button-->
-                                            <div class="compare-btn">
-                                                <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
-                                                    title="Add to Compare">
-                                                    <i class="icon icon-reload"></i>
-                                                    <span class="tooltip-label">Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <!--End Compare Button-->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End Product Button-->
-                            </div>
-                            <!-- end product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout1.html">Bar Kit Resistance Band Yoga</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">$30.00</span>
-                                </div>
-                                <!-- End product price -->
-                                <!--Product Review-->
-                                <div class="product-review">
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                </div>
-                                <!--End Product Review-->
-                            </div>
-                            <!-- End product details -->
-                            <!--Cart Button-->
-                            <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
-                                method="post">
-                                <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button"
-                                    tabindex="0">Add to Cart</button>
-                            </form>
-                            <!--end Cart Button-->
-                        </div>
-                        <div class="col-12 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout1.html" class="product-img">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro3.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro3.jpg"
-                                        alt="" title="">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro3-1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro3-1.jpg"
-                                        alt="" title="">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!--Product Button-->
-                                <div class="button-set style1">
-                                    <ul>
-                                        <li>
-                                            <!--Quick View Button-->
-                                            <a href="javascript:void(0)" title="Quick View"
-                                                class="btn-icon quick-view-popup quick-view" data-toggle="modal"
-                                                data-target="#content_quickview">
-                                                <i class="icon anm anm-search-plus-l"></i>
-                                                <span class="tooltip-label">Quick View</span>
-                                            </a>
-                                            <!--End Quick View Button-->
-                                        </li>
-                                        <li>
-                                            <!--Wishlist Button-->
-                                            <div class="wishlist-btn">
-                                                <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
-                                                    <i class="icon anm anm-heart-l"></i>
-                                                    <span class="tooltip-label">Add To Wishlist</span>
-                                                </a>
-                                            </div>
-                                            <!--End Wishlist Button-->
-                                        </li>
-                                        <li>
-                                            <!--Compare Button-->
-                                            <div class="compare-btn">
-                                                <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
-                                                    title="Add to Compare">
-                                                    <i class="icon icon-reload"></i>
-                                                    <span class="tooltip-label">Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <!--End Compare Button-->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End Product Button-->
-                            </div>
-                            <!-- end product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout1.html">Tops Bras Gym Sets Women's Sports</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">$40.00</span>
-                                </div>
-                                <!-- End product price -->
-                                <!--Product Review-->
-                                <div class="product-review">
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                </div>
-                                <!--End Product Review-->
-                            </div>
-                            <!-- End product details -->
-                            <!--Cart Button-->
-                            <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
-                                method="post">
-                                <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button"
-                                    tabindex="0">Add to Cart</button>
-                            </form>
-                            <!--end Cart Button-->
-                        </div>
-                        <div class="col-12 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout1.html" class="product-img">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro4.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro4.jpg"
-                                        alt="" title="">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro4-1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro4-1.jpg"
-                                        alt="" title="">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!--Product Button-->
-                                <div class="button-set style1">
-                                    <ul>
-                                        <li>
-                                            <!--Quick View Button-->
-                                            <a href="javascript:void(0)" title="Quick View"
-                                                class="btn-icon quick-view-popup quick-view" data-toggle="modal"
-                                                data-target="#content_quickview">
-                                                <i class="icon anm anm-search-plus-l"></i>
-                                                <span class="tooltip-label">Quick View</span>
-                                            </a>
-                                            <!--End Quick View Button-->
-                                        </li>
-                                        <li>
-                                            <!--Wishlist Button-->
-                                            <div class="wishlist-btn">
-                                                <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
-                                                    <i class="icon anm anm-heart-l"></i>
-                                                    <span class="tooltip-label">Add To Wishlist</span>
-                                                </a>
-                                            </div>
-                                            <!--End Wishlist Button-->
-                                        </li>
-                                        <li>
-                                            <!--Compare Button-->
-                                            <div class="compare-btn">
-                                                <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
-                                                    title="Add to Compare">
-                                                    <i class="icon icon-reload"></i>
-                                                    <span class="tooltip-label">Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <!--End Compare Button-->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End Product Button-->
-                            </div>
-                            <!-- end product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout1.html">High Waist Workout Shorts</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">$39.01</span>
-                                </div>
-                                <!-- End product price -->
-                                <!--Product Review-->
-                                <div class="product-review">
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                </div>
-                                <!--End Product Review-->
-                            </div>
-                            <!-- End product details -->
-                            <!--Cart Button-->
-                            <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
-                                method="post">
-                                <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button"
-                                    tabindex="0">Add to Cart</button>
-                            </form>
-                            <!--end Cart Button-->
-                        </div>
-                        <div class="col-12 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout1.html" class="product-img">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro5.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro5.jpg"
-                                        alt="" title="">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload"
-                                        data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro5-1.jpg"
-                                        src="{{ asset('') }}assets_users/images/product-images/yoga-pro5-1.jpg"
-                                        alt="" title="">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!--Product Button-->
-                                <div class="button-set style1">
-                                    <ul>
-                                        <li>
-                                            <!--Quick View Button-->
-                                            <a href="javascript:void(0)" title="Quick View"
-                                                class="btn-icon quick-view-popup quick-view" data-toggle="modal"
-                                                data-target="#content_quickview">
-                                                <i class="icon anm anm-search-plus-l"></i>
-                                                <span class="tooltip-label">Quick View</span>
-                                            </a>
-                                            <!--End Quick View Button-->
-                                        </li>
-                                        <li>
-                                            <!--Wishlist Button-->
-                                            <div class="wishlist-btn">
-                                                <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
-                                                    <i class="icon anm anm-heart-l"></i>
-                                                    <span class="tooltip-label">Add To Wishlist</span>
-                                                </a>
-                                            </div>
-                                            <!--End Wishlist Button-->
-                                        </li>
-                                        <li>
-                                            <!--Compare Button-->
-                                            <div class="compare-btn">
-                                                <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
-                                                    title="Add to Compare">
-                                                    <i class="icon icon-reload"></i>
-                                                    <span class="tooltip-label">Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <!--End Compare Button-->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End Product Button-->
-                            </div>
-                            <!-- end product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout1.html">Fitness Set Tool Yoga Bolster</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">$12.00</span>
-                                </div>
-                                <!-- End product price -->
-                                <!--Product Review-->
-                                <div class="product-review">
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                    <i class="font-13 fa fa-star-o"></i>
-                                </div>
-                                <!--End Product Review-->
-                            </div>
-                            <!-- End product details -->
-                            <!--Cart Button-->
-                            <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
-                                method="post">
-                                <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button"
-                                    tabindex="0">Add to Cart</button>
-                            </form>
-                            <!--end Cart Button-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End New Arrivals-->
-
-        </div>
-        <!--End Body Container-->
-
-        <!--Featured Content-->
-        <div class="section featuredContent featuredContentStyle2">
-            <div class="container">
-                <div class="row-fluid d-flex justify-content-between align-items-center">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pl-0 px-0">
-                        <img data-src="{{ asset('') }}assets_users/images/yoga-fw-bnr.jpg"
-                            src="{{ asset('') }}assets_users/images/yoga-fw-bnr.jpg" alt="" title="">
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                        <div class="row-text text-left">
-                            <h3>How to make a yoga mat more sticky?</h3>
-                            <div class="rte rte-setting featured-row__subtext">
-                                <p>The earth friendly Eco Cork Yoga Mat is made from cork of Oak trees and natural
-                                    rubber from sustainable rubber farms. We are here to serve your yoga and wellbeing
-                                    journey.</p>
-                            </div>
-                            <a href="#" class="btn">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Featured Content-->
+        <!--End Home slider-->
 
-        <!--Featured Content-->
-        <div class="section featuredContent featuredContentStyle2 whiteBg">
-            <div class="container">
-                <div class="row-fluid d-flex justify-content-between align-items-center">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                        <div class="row-text text-left">
-                            <h3>Take a moment</h3>
-                            <div class="rte rte-setting featured-row__subtext">
-                                <p>Inhale, expand the chest, sit up tall. Pause. Exhale, release, relax the shoulders.
-                                </p>
-                                <p>Repeat as many times as you like before continuing with your day.</p>
-                            </div>
-                            <a href="#" class="btn">Explore meditation</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pl-0 px-0">
-                        <img data-src="{{ asset('') }}assets_users/images/yoga-fw-bnr1.jpg"
-                            src="{{ asset('') }}assets_users/images/yoga-fw-bnr1.jpg" alt="" title="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Featured Content-->
-
-        <!--Hero Parallax Banner-->
-        <div class="section parallax-banner-style1 no-pt-section">
-            <div class="hero hero--exlarge hero__overlay bg-size">
-                <img class="bg-img" src="{{ asset('') }}assets_users/images/parallax-banner/yoga-banner.jpg"
-                    alt="" style="display: none;">
-                <div class="hero__inner">
-                    <div class="container">
-                        <div class="wrap-text topleft">
-                            <span>MADE BY YOGIS</span>
-                            <h2 class="h2 mega-title">HIGH QUALITY YOGA SUPPLIERS</h2>
-                            <div class="rte-setting mega-subtitle">
-                                <p>Yogis make yoga clothing that moves and flows with your body. Snug but not too tight,
-                                    no riding up or down, flattering your unique body shape without unintentional
-                                    exposure.</p>
-                            </div>
-                            <a href="#" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Parallax Banner-->
-
-        <!--Instagram-->
-        <div class="section home-instagram no-pt-section">
+        <!--Body Container-->
+        <!--Image Banner-->
+        <div class="section imgBanners style2">
             <div class="container">
                 <div class="section-header">
-                    <p>FOLLOW US@AVONE</p>
+                    <h2>YOGA IS A LIFESTYLE</h2>
+                    <p>Our wide selection of colourful and trendy yoga clothes has something for every yogi's
+                        taste.<br> From high wasted yoga leggings, yoga outfit sets, padded yoga tops and supportive
+                        yoga <br>bras to comfortable harem yoga pants and yoga jumpsuits. </p>
                 </div>
-                <!--Instagram Grid-->
-                <div class="instagram-grid instagram-grid-style2 clearfix">
-                    <ul class="clearfix">
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-6.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-6.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-7.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-7.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-8.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-8.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-4.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-4.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-5.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-5.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-1.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-1.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-2.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-2.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                        <li class="instagram-item">
-                            <a href="#;">
-                                <img src="{{ asset('') }}assets_users/images/instagram-shop/ins-3.jpg"
-                                    data-src="{{ asset('') }}assets_users/images/instagram-shop/ins-3.jpg"
-                                    alt="" title="" class="blur-up lazyload" />
-                                <span class="ins-icon"><i class="icon icon-instagram"></i></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--End Instagram Grid-->
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-4 text-center">
-                        <a href="#;" class="btn">View Gallery</a>
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
+                        <div class="imgBanner-grid-item">
+                            <div class="inner">
+                                <a href="#">
+                                    <span class="img">
+                                        <img class="blur-up lazyload"
+                                            data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner1.jpg"
+                                            src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner1.jpg"
+                                            alt="Trend Alert" title="Trend Alert" />
+                                    </span>
+                                </a>
+                                <div class="details w-50 center">
+                                    <h3 class="title">YOGA KITS</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
+                        <div class="imgBanner-grid-item">
+                            <div class="inner">
+                                <a href="#">
+                                    <span class="img">
+                                        <img class="blur-up lazyload"
+                                            data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner2.jpg"
+                                            src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner2.jpg"
+                                            alt="Hot Occasion" title="Hot Occasion" />
+                                    </span>
+                                </a>
+                                <div class="details w-50 center">
+                                    <h3 class="title">YOGA CLOTHES</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-4 img-banner-item">
+                        <div class="imgBanner-grid-item">
+                            <div class="inner">
+                                <a href="#">
+                                    <span class="img">
+                                        <img class="blur-up lazyload"
+                                            data-src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner3.jpg"
+                                            src="{{ asset('') }}assets_users/images/collection-banner/yoga-s-banner3.jpg"
+                                            alt="Hot Occasion" title="Hot Occasion" />
+                                    </span>
+                                </a>
+                                <div class="details w-50 center">
+                                    <h3 class="title">YOGA MATS</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Instagram-->
+        <!--End Image Banner-->
 
-
-        <!--Store Feature-->
-        <div class="store-features">
+        <!--New Arrivals-->
+        <div class="section product-slider products-grid-section">
             <div class="container">
-                <div class="row store-info">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <i class="anm anm-free-delivery" aria-hidden="true"></i>
-                        <h5>Free Shipping &amp; Return</h5>
-                        <p class="sub-text">Free shipping on all US orders</p>
+                <div class="section-header">
+                    <h2>New Arrivals</h2>
+                    <p>Shop our new arrivals from established brands</p>
+                </div>
+                <div class="productSlider grid-products">
+                    <div class="col-12 item">
+                        <!-- start product image -->
+                        <div class="product-image">
+                            <!-- start product image -->
+                            <a href="product-layout1.html" class="product-img">
+                                <!-- image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro1.jpg"
+                                    alt="" title="">
+                                <!-- End image -->
+                                <!-- Hover image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro1-1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro1-1.jpg"
+                                    alt="" title="">
+                                <!-- End hover image -->
+                            </a>
+                            <!-- end product image -->
+                            <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
+                            <!--Product Button-->
+                            <div class="button-set style1">
+                                <ul>
+                                    <li>
+                                        <!--Quick View Button-->
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="btn-icon quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-l"></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                        <!--End Quick View Button-->
+                                    </li>
+                                    <li>
+                                        <!--Wishlist Button-->
+                                        <div class="wishlist-btn">
+                                            <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                                <span class="tooltip-label">Add To Wishlist</span>
+                                            </a>
+                                        </div>
+                                        <!--End Wishlist Button-->
+                                    </li>
+                                    <li>
+                                        <!--Compare Button-->
+                                        <div class="compare-btn">
+                                            <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
+                                                title="Add to Compare">
+                                                <i class="icon icon-reload"></i>
+                                                <span class="tooltip-label">Add to Compare</span>
+                                            </a>
+                                        </div>
+                                        <!--End Compare Button-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--End Product Button-->
+                        </div>
+                        <!-- end product image -->
+                        <!--start product details -->
+                        <div class="product-details text-center">
+                            <!-- product name -->
+                            <div class="product-name">
+                                <a href="product-layout1.html">4 mm Thick Yoga Mat</a>
+                            </div>
+                            <!-- End product name -->
+                            <!-- product price -->
+                            <div class="product-price">
+                                <span class="price">$50.01</span>
+                            </div>
+                            <!-- End product price -->
+                            <!--Product Review-->
+                            <div class="product-review">
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                            </div>
+                            <!--End Product Review-->
+                        </div>
+                        <!-- End product details -->
+                        <!--Cart Button-->
+                        <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
+                            method="post">
+                            <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button" tabindex="0">Add
+                                to Cart</button>
+                        </form>
+                        <!--end Cart Button-->
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <i class="anm anm-money" aria-hidden="true"></i>
-                        <h5>Money Guarantee</h5>
-                        <p class="sub-text">30 days money back guarantee</p>
+                    <div class="col-12 item">
+                        <!-- start product image -->
+                        <div class="product-image">
+                            <!-- start product image -->
+                            <a href="product-layout1.html" class="product-img">
+                                <!-- image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro2.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro2.jpg"
+                                    alt="" title="">
+                                <!-- End image -->
+                                <!-- Hover image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro2-1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro2-1.jpg"
+                                    alt="" title="">
+                                <!-- End hover image -->
+                            </a>
+                            <!-- end product image -->
+                            <!--Product Button-->
+                            <div class="button-set style1">
+                                <ul>
+                                    <li>
+                                        <!--Quick View Button-->
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="btn-icon quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-l"></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                        <!--End Quick View Button-->
+                                    </li>
+                                    <li>
+                                        <!--Wishlist Button-->
+                                        <div class="wishlist-btn">
+                                            <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                                <span class="tooltip-label">Add To Wishlist</span>
+                                            </a>
+                                        </div>
+                                        <!--End Wishlist Button-->
+                                    </li>
+                                    <li>
+                                        <!--Compare Button-->
+                                        <div class="compare-btn">
+                                            <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
+                                                title="Add to Compare">
+                                                <i class="icon icon-reload"></i>
+                                                <span class="tooltip-label">Add to Compare</span>
+                                            </a>
+                                        </div>
+                                        <!--End Compare Button-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--End Product Button-->
+                        </div>
+                        <!-- end product image -->
+                        <!--start product details -->
+                        <div class="product-details text-center">
+                            <!-- product name -->
+                            <div class="product-name">
+                                <a href="product-layout1.html">Bar Kit Resistance Band Yoga</a>
+                            </div>
+                            <!-- End product name -->
+                            <!-- product price -->
+                            <div class="product-price">
+                                <span class="price">$30.00</span>
+                            </div>
+                            <!-- End product price -->
+                            <!--Product Review-->
+                            <div class="product-review">
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                            </div>
+                            <!--End Product Review-->
+                        </div>
+                        <!-- End product details -->
+                        <!--Cart Button-->
+                        <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
+                            method="post">
+                            <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button" tabindex="0">Add
+                                to Cart</button>
+                        </form>
+                        <!--end Cart Button-->
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <i class="anm anm-phone-24" aria-hidden="true"></i>
-                        <h5>Online Support</h5>
-                        <p class="sub-text">We support online 24/7 on day</p>
+                    <div class="col-12 item">
+                        <!-- start product image -->
+                        <div class="product-image">
+                            <!-- start product image -->
+                            <a href="product-layout1.html" class="product-img">
+                                <!-- image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro3.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro3.jpg"
+                                    alt="" title="">
+                                <!-- End image -->
+                                <!-- Hover image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro3-1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro3-1.jpg"
+                                    alt="" title="">
+                                <!-- End hover image -->
+                            </a>
+                            <!-- end product image -->
+                            <!--Product Button-->
+                            <div class="button-set style1">
+                                <ul>
+                                    <li>
+                                        <!--Quick View Button-->
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="btn-icon quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-l"></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                        <!--End Quick View Button-->
+                                    </li>
+                                    <li>
+                                        <!--Wishlist Button-->
+                                        <div class="wishlist-btn">
+                                            <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                                <span class="tooltip-label">Add To Wishlist</span>
+                                            </a>
+                                        </div>
+                                        <!--End Wishlist Button-->
+                                    </li>
+                                    <li>
+                                        <!--Compare Button-->
+                                        <div class="compare-btn">
+                                            <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
+                                                title="Add to Compare">
+                                                <i class="icon icon-reload"></i>
+                                                <span class="tooltip-label">Add to Compare</span>
+                                            </a>
+                                        </div>
+                                        <!--End Compare Button-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--End Product Button-->
+                        </div>
+                        <!-- end product image -->
+                        <!--start product details -->
+                        <div class="product-details text-center">
+                            <!-- product name -->
+                            <div class="product-name">
+                                <a href="product-layout1.html">Tops Bras Gym Sets Women's Sports</a>
+                            </div>
+                            <!-- End product name -->
+                            <!-- product price -->
+                            <div class="product-price">
+                                <span class="price">$40.00</span>
+                            </div>
+                            <!-- End product price -->
+                            <!--Product Review-->
+                            <div class="product-review">
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                            </div>
+                            <!--End Product Review-->
+                        </div>
+                        <!-- End product details -->
+                        <!--Cart Button-->
+                        <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
+                            method="post">
+                            <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button" tabindex="0">Add
+                                to Cart</button>
+                        </form>
+                        <!--end Cart Button-->
+                    </div>
+                    <div class="col-12 item">
+                        <!-- start product image -->
+                        <div class="product-image">
+                            <!-- start product image -->
+                            <a href="product-layout1.html" class="product-img">
+                                <!-- image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro4.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro4.jpg"
+                                    alt="" title="">
+                                <!-- End image -->
+                                <!-- Hover image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro4-1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro4-1.jpg"
+                                    alt="" title="">
+                                <!-- End hover image -->
+                            </a>
+                            <!-- end product image -->
+                            <!--Product Button-->
+                            <div class="button-set style1">
+                                <ul>
+                                    <li>
+                                        <!--Quick View Button-->
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="btn-icon quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-l"></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                        <!--End Quick View Button-->
+                                    </li>
+                                    <li>
+                                        <!--Wishlist Button-->
+                                        <div class="wishlist-btn">
+                                            <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                                <span class="tooltip-label">Add To Wishlist</span>
+                                            </a>
+                                        </div>
+                                        <!--End Wishlist Button-->
+                                    </li>
+                                    <li>
+                                        <!--Compare Button-->
+                                        <div class="compare-btn">
+                                            <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
+                                                title="Add to Compare">
+                                                <i class="icon icon-reload"></i>
+                                                <span class="tooltip-label">Add to Compare</span>
+                                            </a>
+                                        </div>
+                                        <!--End Compare Button-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--End Product Button-->
+                        </div>
+                        <!-- end product image -->
+                        <!--start product details -->
+                        <div class="product-details text-center">
+                            <!-- product name -->
+                            <div class="product-name">
+                                <a href="product-layout1.html">High Waist Workout Shorts</a>
+                            </div>
+                            <!-- End product name -->
+                            <!-- product price -->
+                            <div class="product-price">
+                                <span class="price">$39.01</span>
+                            </div>
+                            <!-- End product price -->
+                            <!--Product Review-->
+                            <div class="product-review">
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                            </div>
+                            <!--End Product Review-->
+                        </div>
+                        <!-- End product details -->
+                        <!--Cart Button-->
+                        <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
+                            method="post">
+                            <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button" tabindex="0">Add
+                                to Cart</button>
+                        </form>
+                        <!--end Cart Button-->
+                    </div>
+                    <div class="col-12 item">
+                        <!-- start product image -->
+                        <div class="product-image">
+                            <!-- start product image -->
+                            <a href="product-layout1.html" class="product-img">
+                                <!-- image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro5.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro5.jpg"
+                                    alt="" title="">
+                                <!-- End image -->
+                                <!-- Hover image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{{ asset('') }}assets_users/images/product-images/yoga-pro5-1.jpg"
+                                    src="{{ asset('') }}assets_users/images/product-images/yoga-pro5-1.jpg"
+                                    alt="" title="">
+                                <!-- End hover image -->
+                            </a>
+                            <!-- end product image -->
+                            <!--Product Button-->
+                            <div class="button-set style1">
+                                <ul>
+                                    <li>
+                                        <!--Quick View Button-->
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="btn-icon quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-l"></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                        <!--End Quick View Button-->
+                                    </li>
+                                    <li>
+                                        <!--Wishlist Button-->
+                                        <div class="wishlist-btn">
+                                            <a class="btn-icon wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                                <span class="tooltip-label">Add To Wishlist</span>
+                                            </a>
+                                        </div>
+                                        <!--End Wishlist Button-->
+                                    </li>
+                                    <li>
+                                        <!--Compare Button-->
+                                        <div class="compare-btn">
+                                            <a class="btn-icon compare add-to-compare" href="compare-variant1.html"
+                                                title="Add to Compare">
+                                                <i class="icon icon-reload"></i>
+                                                <span class="tooltip-label">Add to Compare</span>
+                                            </a>
+                                        </div>
+                                        <!--End Compare Button-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--End Product Button-->
+                        </div>
+                        <!-- end product image -->
+                        <!--start product details -->
+                        <div class="product-details text-center">
+                            <!-- product name -->
+                            <div class="product-name">
+                                <a href="product-layout1.html">Fitness Set Tool Yoga Bolster</a>
+                            </div>
+                            <!-- End product name -->
+                            <!-- product price -->
+                            <div class="product-price">
+                                <span class="price">$12.00</span>
+                            </div>
+                            <!-- End product price -->
+                            <!--Product Review-->
+                            <div class="product-review">
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                                <i class="font-13 fa fa-star-o"></i>
+                            </div>
+                            <!--End Product Review-->
+                        </div>
+                        <!-- End product details -->
+                        <!--Cart Button-->
+                        <form class="add" action="https://www.annimexweb.com/items/avone/cart-variant1.html"
+                            method="post">
+                            <button class="btn-icon btn btn-addto-cart simple-add-btn" type="button" tabindex="0">Add
+                                to Cart</button>
+                        </form>
+                        <!--end Cart Button-->
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Store Feature-->
+        <!--End New Arrivals-->
+
+    </div>
+    <!--End Body Container-->
+
+    <!--Featured Content-->
+    <div class="section featuredContent featuredContentStyle2">
+        <div class="container">
+            <div class="row-fluid d-flex justify-content-between align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pl-0 px-0">
+                    <img data-src="{{ asset('') }}assets_users/images/yoga-fw-bnr.jpg"
+                        src="{{ asset('') }}assets_users/images/yoga-fw-bnr.jpg" alt="" title="">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="row-text text-left">
+                        <h3>How to make a yoga mat more sticky?</h3>
+                        <div class="rte rte-setting featured-row__subtext">
+                            <p>The earth friendly Eco Cork Yoga Mat is made from cork of Oak trees and natural
+                                rubber from sustainable rubber farms. We are here to serve your yoga and wellbeing
+                                journey.</p>
+                        </div>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Featured Content-->
+
+    <!--Featured Content-->
+    <div class="section featuredContent featuredContentStyle2 whiteBg">
+        <div class="container">
+            <div class="row-fluid d-flex justify-content-between align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="row-text text-left">
+                        <h3>Take a moment</h3>
+                        <div class="rte rte-setting featured-row__subtext">
+                            <p>Inhale, expand the chest, sit up tall. Pause. Exhale, release, relax the shoulders.
+                            </p>
+                            <p>Repeat as many times as you like before continuing with your day.</p>
+                        </div>
+                        <a href="#" class="btn">Explore meditation</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pl-0 px-0">
+                    <img data-src="{{ asset('') }}assets_users/images/yoga-fw-bnr1.jpg"
+                        src="{{ asset('') }}assets_users/images/yoga-fw-bnr1.jpg" alt="" title="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Featured Content-->
+
+    <!--Hero Parallax Banner-->
+    <div class="section parallax-banner-style1 no-pt-section">
+        <div class="hero hero--exlarge hero__overlay bg-size">
+            <img class="bg-img" src="{{ asset('') }}assets_users/images/parallax-banner/yoga-banner.jpg"
+                alt="" style="display: none;">
+            <div class="hero__inner">
+                <div class="container">
+                    <div class="wrap-text topleft">
+                        <span>MADE BY YOGIS</span>
+                        <h2 class="h2 mega-title">HIGH QUALITY YOGA SUPPLIERS</h2>
+                        <div class="rte-setting mega-subtitle">
+                            <p>Yogis make yoga clothing that moves and flows with your body. Snug but not too tight,
+                                no riding up or down, flattering your unique body shape without unintentional
+                                exposure.</p>
+                        </div>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Parallax Banner-->
+
+
+
+    <!--Store Feature-->
+    <div class="store-features">
+        <div class="container">
+            <div class="row store-info">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                    <i class="anm anm-free-delivery" aria-hidden="true"></i>
+                    <h5>Free Shipping &amp; Return</h5>
+                    <p class="sub-text">Free shipping on all US orders</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                    <i class="anm anm-money" aria-hidden="true"></i>
+                    <h5>Money Guarantee</h5>
+                    <p class="sub-text">30 days money back guarantee</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                    <i class="anm anm-phone-24" aria-hidden="true"></i>
+                    <h5>Online Support</h5>
+                    <p class="sub-text">We support online 24/7 on day</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Store Feature-->
     </div><!--End Page Wrapper-->
 
     <!--Footer-->
@@ -1323,8 +1053,8 @@
                             <div class="quantity">
                                 <div class="wrapQtyBtn">
                                     <div class="qtyField">
-                                        <a class="qtyBtn minus" href="javascript:void(0);"><i
-                                                class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                        <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r"
+                                                aria-hidden="true"></i></a>
                                         <input type="text" name="quantity" value="1"
                                             class="product-form__input qty">
                                         <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r"

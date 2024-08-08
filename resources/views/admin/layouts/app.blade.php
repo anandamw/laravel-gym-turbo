@@ -16,11 +16,13 @@
     <link href="{{ asset('') }}assets/css/style.css" rel="stylesheet">
     <!-- Rating -->
 
+
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}assets/vendor/star-rating/star-rating-svg.css" />
 
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
     <!--*******************
         Preloader start

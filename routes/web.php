@@ -5,25 +5,63 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PaketsSetupController;
 use App\Http\Controllers\MembershipTransactionsController;
 use App\Http\Controllers\MembershipRecapitulationsController;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 
-Route::get("/login", [SessionsController::class, 'index']);
 
 
-Route::get('/dashboard', function () {
-    $title = "Dashboard";
-    return view('admin.dashboard', compact('title'));
+
+
+
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', function () {
+        return view('users.home');
+    });
+    Route::get('/login', [SessionsController::class, 'login'])->name('login');
+    Route::post('/login', [SessionsController::class, 'login_action']);
+    Route::get('/register', [SessionsController::class, 'register']);
+    Route::post('/register', [SessionsController::class, 'register_action']);
 });
 
-Route::get('/', function () {
-    return view('users.home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function () {
+        $userRole = auth()->user()->role;
+        if ($userRole == 'admin' || $userRole == 'karyawan') {
+            return redirect('/dashboard/' . $userRole);
+        } elseif ($userRole == 'customer') {
+            return redirect('/page');
+        }
+    });
+
+    // group admin
+    Route::middleware(['userAkses:admin'])->group(function () {
+        Route::get("/dashboard/admin", [DashboardController::class, 'index']);
+    });
+
+    // group karyawan
+    Route::middleware(['userAkses:karyawan'])->group(function () {
+        Route::get("/dashboard/karyawan", [DashboardController::class, 'index']);
+    });
+
+    // group customer
+    Route::middleware(['userAkses:customer'])->group(function () {
+        Route::get('/page', function () {
+            return view('users.page');
+        });
+    });
+
+
+    Route::get('/customer', [CustomersController::class, 'index']);
+    Route::get('/logout', [SessionsController::class, 'logout']);
 });
+
 
 // customer 
-Route::get('/customer', [CustomersController::class, 'index']);
 Route::get('/customer/create', [CustomersController::class, 'create']);
 
 // hak akses

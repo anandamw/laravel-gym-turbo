@@ -22,9 +22,13 @@
         <img src="{{ asset('') }}assets_users/images/loader.gif" alt="Loading..." />
     </div>
 
+    @include('users.layouts.navbar')
 
     @yield('content')
     <!--End Quickview Popup-->
+
+    @include('users.layouts.scrollbar')
+
 
 
     <!-- Including Jquery -->
